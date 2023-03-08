@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  # get 'posts/new'
-  # get 'posts/show'
-  # get 'posts/index'
+
   root to: 'homes#top'
   devise_for :users
   get 'users/show' => 'users#show'
