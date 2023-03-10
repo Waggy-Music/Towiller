@@ -3,7 +3,7 @@
 
 <% @posts.each do |post| %>
 
-<%= post.user_email %>
-<%= post.body %>
+<%#= post.user.email %>
+<%=link_to post.body,post_path(post.id) %>
 
 <% end %>
