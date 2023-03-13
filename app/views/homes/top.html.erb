@@ -12,7 +12,8 @@
       <%= link_to "アカウント作成",new_user_registration_path,class:"btn btn-light my-3"%>
     <% else %>
       <%= link_to "つぶやく",new_post_path,class:"btn btn-info btn-rounded"%>
-      <%= link_to "ログアウト",destroy_user_session_path,class:"btn btn-secondary my-3"%>
+      <%= link_to "プロフィール", user_path(@user.id), class: "btn btn-info" %>
+      <%= link_to "ログアウト",destroy_user_session_path,method: :delete,class:"btn btn-secondary my-3"%>
     <% end %>
     </div>
     
@@ -22,7 +23,7 @@
     </div>
     
     <div class="col-md-5 bg-danger">
-        <%= link_to "プロフィール", user_path(@user.id), class: "btn btn-info" %>
+        
         <%= link_to "投稿一覧", posts_path, class: "btn btn-info" %>
     </div>
 
